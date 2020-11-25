@@ -1,6 +1,6 @@
-# goit-markup-hw-06
+# goit-markup-hw-05
 
-https://mrmadgav.github.io/goit-markup-hw-06/
+https://mrmadgav.github.io/goit-markup-hw-05/
 
 
 

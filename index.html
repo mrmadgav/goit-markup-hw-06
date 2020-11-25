@@ -25,7 +25,7 @@
                     </div>
                     <ul class="menu">
                         <li class="menu-item">
-                            <a class="menu-page undertitle"
+                            <a class="menu-page undertitle undertitle-active"
                                 href="./index.html">Студия</a></li>
                         <li class="menu-item"><a class="menu-page undertitle"
                                 href="./portfolio.html">Портфолио</a></li>
@@ -522,19 +522,21 @@
                                                     placeholder="E-mail"
                                                     required>
                                                 <button type="submit"
-                                                    class="contact-form-btn"><span class="subscribe">подписаться</span><svg
-                                                    width="24"
-                                                    height="24">
-                                                    <use
-                                                        href="./sprite.svg#icon-send"></use>
-                                                </svg></button>
-                                            </form>
-                                        </div>
+                                                    class="contact-form-btn"><span
+                                                        class="subscribe">подписаться</span><svg class="icon-subscribe"
+                                                        width="24"
+                                                        height="24">
+                                                        <use
+                                                            href="./sprite.svg#icon-send"></use>
+                                                    </svg></button>
+                                        </form>
                                     </div>
-                                </section>
-                            </div>
-                        </footer>
-                        <div class="modal is-hidden" data-modal><button
+                                </div>
+                            </section>
+                        </div>
+                    </footer>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal" data-modal><button
                                 type="button"
                                 class="modal-button" data-modal-close><svg
                                     class="icon-krest" width="11" height="11">
@@ -580,21 +582,11 @@
                                     <textarea class="contact-form__message"
                                         name="user-message"
                                         placeholder="Введите текст"></textarea>
-                                </section>
-                                <input type="checkbox" name="user-policy"
-                                    value="user-policy-ok"
-                                    class="modal-form-policy visually-hidden"
-                                    id="policy">
-                                <label for="policy"
-                                    class="contact-form-policy-label">
-                                    <span><svg class="input-checkbox" width="16"
-                                            height="15">
-                                            <use
-                                                href="./sprite.svg#icon-icon-check-1"></use>
-                                        </svg></span>&nbsp;&nbsp;&nbsp;Соглашаюсь
-                                    с рассылкой и
-                                    принимаю&nbsp;<a
-                                        href="">Условия договора</a>
+                                </section>                               
+                                    <input type="checkbox" name="user-policy" value="user-policy-ok"
+                                    class="modal-form-policy visually-hidden" id="policy">
+                                <label for="policy" class="contact-form-policy-label">
+                                    Соглашаюсь с рассылкой и принимаю&nbsp;<a href="">Условия договора</a>   
                                 </label>
                                 <div class="contact-form__btn-wrapper">
                                     <button type="submit"
@@ -602,6 +594,7 @@
                                 </div>
                             </form>
                         </div>
-                        <script src="./js/modal.js"></script>
-                    </body>
-                </html>
+                    </div>
+                    <script src="./js/modal.js"></script>
+                </body>
+            </html>
