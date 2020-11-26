@@ -209,7 +209,7 @@ ul {
 .box-svg {
   text-align: center;
   margin-bottom: 55px;
-  background:#F5F4FA;
+  background: #f5f4fa;
   padding-top: 22px;
   padding-bottom: 22px;
   border-radius: 4px;
@@ -258,6 +258,7 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--white);
 }
 .team {
   display: flex;
@@ -266,6 +267,7 @@ ul {
 .team-section {
   padding-top: 94px;
   background: var(--team-section-color);
+  padding-bottom: 94px;
 }
 .clients .container {
   padding-top: 94px;
@@ -580,7 +582,7 @@ button:focus {
 .icon {
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .advantages-list .icon {
   margin-bottom: 55px;
@@ -674,7 +676,7 @@ button:focus {
 .undertitle:before {
   position: absolute;
   content: "";
-  height: 32px;
+  height: 48px;
   width: 0px;
   border-bottom: solid 3px var(--style-color);
 }
@@ -683,20 +685,21 @@ button:focus {
   opacity: 1;
 }
 .undertitle-active {
+  position: relative;
   transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    color: inherit;
-  width: 76px;
+  color: inherit;
   opacity: 1;
 }
 .undertitle-active:before {
   position: absolute;
   content: "";
   height: 32px;
-  width: 0px;
+  width: 100%;
   border-bottom: solid 3px var(--style-color);
   opacity: 1;
+  bottom: 0;
 }
 .undertitle-active:before {
   width: 76px;
@@ -753,11 +756,16 @@ button:focus {
 }
 .modal-button {
   border: none;
-  position: relative;
+  position: absolute;
   display: inline-block;
-  left: 500px;
-  bottom: -17px;
+  right: 12px;
+  top: 12px;
+  border: 1px solid gray;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: none;
 }
 .modal-button:hover {
   background-color: #fff;
@@ -874,8 +882,11 @@ input {
 textarea {
   outline: none;
 }
-textarea:focus {
+textarea:hover {
   border: 1px solid var(--style-color);
+}
+textarea:focus {
+  border: none;
 }
 .form-input-svg {
   position: absolute;
@@ -910,15 +921,16 @@ textarea:focus {
   display: block;
   width: 16px;
   height: 16px;
-  outline: 1px solid #000;
+  border: 1px solid #000;
   border-radius: 4px;
-  margin-right: 10px; 
+  margin-right: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .modal-form-policy:checked + .contact-form-policy-label::before {
   background-image: url("../icon\ check.svg");
   fill: var(--style-color);
+  border: none;
 }
 /* End Contanct Form */
 
@@ -928,7 +940,21 @@ textarea:focus {
   width: 358px;
   height: 50px;
   padding-left: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--white);
 }
-
+.footer-contact-form__input:hover {
+  border-color: var(--style-color);
+}
+.contact-form__input:hover {
+  border-color: var(--style-color);
+}
+.contact-form__input:hover + .form-input-svg {
+  fill: var(--style-color);
+}
+.contact-form__input:focus + .form-input-svg {
+  fill: var(--style-color);
+}
 /* End Footer Contact Mail Form */
