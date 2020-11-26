@@ -677,7 +677,6 @@ button:focus {
   position: absolute;
   content: "";
   height: 48px;
-  width: 0px;
   border-bottom: solid 3px var(--style-color);
 }
 .undertitle:hover:before {
@@ -700,10 +699,6 @@ button:focus {
   border-bottom: solid 3px var(--style-color);
   opacity: 1;
   bottom: 0;
-}
-.undertitle-active:before {
-  width: 76px;
-  opacity: 1;
 }
 /* End Undertitle */
 
@@ -886,7 +881,9 @@ textarea:hover {
   border: 1px solid var(--style-color);
 }
 textarea:focus {
-  border: none;
+   border: none;
+   padding-top: 20px;
+   padding-left: 20px;
 }
 .form-input-svg {
   position: absolute;
